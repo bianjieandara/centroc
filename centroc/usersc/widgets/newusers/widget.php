@@ -24,7 +24,7 @@ $newUsers .= $c;
   <div class="col-lg-6">
     <div class="card">
       <div class="card-body">
-        <h4 class="mb-3">New Users</h4>
+        <h4 class="mb-3">Nuevos Usuarios</h4>
         <canvas id="new-users-chart"></canvas>
       </div>
     </div>
@@ -38,11 +38,11 @@ ctx.height = 150;
 var myChart = new Chart( ctx, {
   type: 'line',
   data: {
-    labels: [ "Last 7 Days", "Last 30 Days", "Last 90 Days", "Last 180 Days", "Last 365 Days" ],
+    labels: [ "Ultimos 7 Dias", "Ultimos 30 Dias", "Ultimos 90 Dias", "Ultimos 180 Dias", "Ultimos 365 Dias" ],
     type: 'line',
     defaultFontFamily: 'Montserrat',
     datasets: [ {
-      label: "New Users",
+      label: "Nuevos Usuarios",
       data: [ <?=$newUsers?> ],
       backgroundColor: 'transparent',
       borderColor: 'rgba(220,53,69,0.75)',
@@ -94,7 +94,7 @@ var myChart = new Chart( ctx, {
         },
         scaleLabel: {
           display: true,
-          labelString: 'Users'
+          labelString: 'Usuarios'
         }
       } ]
     },

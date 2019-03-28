@@ -1,23 +1,4 @@
 <?php
-// This is a user-facing page
-/*
-UserSpice 4
-An Open Source PHP User Management System
-by the UserSpice Team at http://UserSpice.com
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
 require_once '../users/init.php';
 require_once $abs_us_root.$us_url_root.'users/includes/template/prep.php';
 
@@ -250,33 +231,22 @@ $userdetails=$user2->data();
                 <div class="col-sm-12 col-md-2">
                     <p><img src="<?=$grav; ?>" class="img-thumbnail" alt="Generic placeholder thumbnail"></p>
                 </div>
-                <div class="col-sm-12 col-md-10">
-                    <h1>Update your user settings</h1>
-                    <strong>Want to change your profile picture? </strong><br> Visit <a href="https://en.gravatar.com/">https://en.gravatar.com/</a> and setup an account with the email address <?=$userdetails->email?>.  It works across millions of sites. It's fast and easy!<br>
+                <div class="col-sm-12 col-md-8">
+                    <h2>Modifica tus Datos</h2>
+                    <strong>Quieres cambiar tu foto de perfil? </strong><br> Visita <a href="https://en.gravatar.com/">https://en.gravatar.com/</a> y crea una cuenta con este correo electronico <?=$userdetails->email?>. Funciona en millones de sitios. Es rapido y facil!<br>
                     <?php if(!$errors=='') {?><div class="alert alert-danger"><?=display_errors($errors);?></div><?php } ?>
                     <?php if(!$successes=='') {?><div class="alert alert-success"><?=display_successes($successes);?></div><?php } ?>
 
                     <form name='updateAccount' action='user_settings.php' method='post'>
 
-                        <div class="form-group">
-                            <label>Username</label>
-                            <?php if (($settings->change_un == 0) || (($settings->change_un == 2) && ($userdetails->un_changed == 1)) ) {?>
-															<div class="input-group">
-																 <input  class='form-control' type='text' name='username' value='<?=$userdetails->username?>' readonly/>
-																 <span class="input-group-addon" data-toggle="tooltip" title="<?php if($settings->change_un==0) {?>The Administrator has disabled changing usernames.<?php } if(($settings->change_un == 2) && ($userdetails->un_changed == 1)) {?>The Administrator set username changes to occur only once and you have done so already.<?php } ?>">Why can't I change this?</span>
-															 </div>
-                            <?php }else{ ?>
-														<input  class='form-control' type='text' name='username' value='<?=$userdetails->username?>' autocomplete="off">
-                            <?php } ?>
-                        </div>
 
                         <div class="form-group">
-                            <label>First Name</label>
+                            <label>Nombre</label>
                             <input  class='form-control' type='text' name='fname' value='<?=$userdetails->fname?>' autocomplete="off" />
                         </div>
 
                         <div class="form-group">
-                            <label>Last Name</label>
+                            <label>Apellido</label>
                             <input  class='form-control' type='text' name='lname' value='<?=$userdetails->lname?>' autocomplete="off" />
                         </div>
 
@@ -284,53 +254,53 @@ $userdetails=$user2->data();
                             <label>Email</label>
                             <input class='form-control' type='text' name='email' value='<?=$userdetails->email?>' autocomplete="off" />
 														<?php if(!IS_NULL($userdetails->email_new)) {?><br /><div class="alert alert-danger">
-															<p><strong>Please note</strong> there is a pending request to update your email to <?=$userdetails->email_new?>.</p>
-															<p>Please use the verification email to complete this request.</p>
-															<p>If you need a new verification email, please re-enter the email above and submit the request again.</p>
+															<p><strong>Advertencia</strong> hay una peticion pendiente para cambiar su email a <?=$userdetails->email_new?>.</p>
+                              <p>Un email de verificacion fue enviado a su correo</p>
+                              <p>Si necesita que se le envie de nuevo, Por favor ingrese de nuevo el correo en el formulario y envielo de nuevo.</p>
 														</div><?php } ?>
                         </div>
 
 												<div class="form-group">
-                            <label>Confirm Email</label>
+                            <label>Confirmar Email</label>
                             <input class='form-control' type='text' name='confemail' autocomplete="off" />
                         </div>
 
 												<div class="form-group">
-												<label>New Password</label>
+												<label>Nueva Contraseña</label>
 	                      <div class="input-group" data-container="body">
 	                        <span class="btn btn-secondary input-group-addon password_view_control" id="addon1"><span class="fa fa-eye"></span></span>
 	                        <input  class="form-control" type="password" autocomplete="off" name="password" id="password" aria-describedby="passwordhelp" autocomplete="off">
-													<span class="btn btn-secondary input-group-addon" id="addon2" data-container="body" data-toggle="tooltip" data-placement="top" title="<?=$settings->min_pw?> char min, <?=$settings->max_pw?> max.">?</span>
+													<span class="btn btn-secondary input-group-addon" id="addon2" data-container="body" data-toggle="tooltip" data-placement="top" title="<?=$settings->min_pw?> caracteres minimo, <?=$settings->max_pw?> maximo.">?</span>
 	                      </div></div>
 
 	                      <div class="form-group">
-													<label>Confirm Password</label>
+													<label>Confirmar Contraseña</label>
 	                      <div class="input-group" data-container="body">
 	                        <span class="btn btn-secondary input-group-addon password_view_control" id="addon3"><span class="fa fa-eye"></span></span>
 	                        <input  type="password" autocomplete="off" id="confirm" name="confirm" class="form-control" autocomplete="off">
-	                       <span class="btn btn-secondary input-group-addon" id="addon4" data-container="body" data-toggle="tooltip" data-placement="top" title="Must match the New Password">?</span>
+	                       <span class="btn btn-secondary input-group-addon" id="addon4" data-container="body" data-toggle="tooltip" data-placement="top" title="Debe coincidir con la Nueva Contraseña">?</span>
 											 </div></div>
 
 											 <?php if(!is_null($userdetails->pin)) {?>
 												 <div class="form-group">
-													 <label>Reset PIN
+													 <label>Resetear PIN
 													 <input  type="checkbox" id="resetPin" name="resetPin" value="1" /></label>
 													</div>
 												<?php } ?>
 
 											 <div class="form-group">
-													 <label>Old Password<?php if(!is_null($userdetails->password)) {?>, required for changing password, email, or resetting PIN<?php } ?></label>
+													 <label>Contraseña Actual<?php if(!is_null($userdetails->password)) {?>, se requiere para cambiar la Contraseña o el Email<?php } ?></label>
 													 <div class="input-group" data-container="body">
 														 <span class="btn btn-secondary input-group-addon password_view_control" id="addon6"><span class="fa fa-eye"></span></span>
 														 <input class='form-control' type='password' id="old" name='old' <?php if(is_null($userdetails->password)) {?>disabled<?php } ?> autocomplete="off" />
-														 <span class="btn btn-secondary input-group-addon" id="addon5" data-container="body" data-toggle="tooltip" data-placement="top" title="Required to change your password">?</span>
+														 <span class="btn btn-secondary input-group-addon" id="addon5" data-container="body" data-toggle="tooltip" data-placement="top" title="Requerido para cambiar la Contraseña">?</span>
 													 </div>
 											 </div>
 
                         <input type="hidden" name="csrf" value="<?=Token::generate();?>" />
 
-                        <p><input class='btn btn-primary' type='submit' value='Update' class='submit' /></p>
-                        <p><a class="btn btn-info" href="../users/account.php">Cancel</a></p>
+                        <p><input class='btn crose-btn' type='submit' value='Actualizar' class='submit' /><a class="btn crose-btn pull-right" href="../users/account.php">Cancelar</a></p>
+
 
                     </form>
                     <?php

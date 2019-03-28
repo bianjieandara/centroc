@@ -16,9 +16,10 @@
 
   <!-- Site Settings -->
   <form class="" action="admin.php?view=<?=$view?>" name="settings" method="post">
-    <h2><b>Configuracion del sitio web</b></h2>
+
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-12 col-md-8 offset-md-2">
+          <h2><b>Configuracion del sitio web</b></h2><br>
         <!-- Left -->
         <h2>General</h2>
         <!-- Site Name -->
@@ -87,7 +88,7 @@
           <div class="form-group">
             <label for="force_user_pr">Forzar reinicio de contraseña <a class="nounderline" data-toggle="tooltip" title="esta opcion causara que todos los usuarios incluyendo quien activo esta opcion a reiniciar su contraseña. ningun usuario podra salir de la pagina de opciones hasta que coloquen su nueva contraseña. Usar esta funcion con cuidado"><font color="blue">?</font></a></label>
             <span style="float:right;">
-              <button type="button" name="force_user_pr" id="force_user_pr" class="btn btn-danger input-group-addon">Forzar Reinicio</button>
+              <button type="button" name="force_user_pr" id="force_user_pr" class="btn btn-danger input-group-addon">Forzar</button>
               <span>
               </div>
 
@@ -128,106 +129,7 @@
 
             </div>
 
-            <!-- right column -->
-            <div class="col-sm-6">
-              <!-- Force Password Reset -->
-              <h2>Mensajes & Notificaciones</h2>
-
-              <!-- Messaging Option -->
-              <div class="form-group">
-                <label for="messaging">Activar Sistema de Mensajeria<a class="nounderline" data-toggle="tooltip" title="Enable or disable the built in messaging system which features Mass Messaging, user-specific messaging with replies in thread format and email notifications. Default: Disabled."><font color="blue">?</font></a></label>
-                <span style="float:right;">
-                  <label class="switch switch-text switch-success">
-                    <input id="messaging" type="checkbox" class="switch-input toggle" data-desc="Messaging System Status" <?php if($settings->messaging==1) echo 'checked="true"'; ?>>
-                    <span data-on="Si" data-off="No" class="switch-label"></span>
-                    <span class="switch-handle"></span>
-                  </label>
-                </span>
-              </div>
-
-
-              <!-- Notification System -->
-              <div class="form-group">
-                <label for="notifications">Activar Sistema de Notificaciones <a class="nounderline" data-toggle="tooltip" title="Enable or disable the notification system. Default: Disabled."><font color="blue">?</font></a></label>
-                <span style="float:right;">
-                  <label class="switch switch-text switch-success">
-                    <input id="notifications" type="checkbox" class="switch-input toggle" data-desc="Notification System Status" <?php if($settings->notifications==1) echo 'checked="true"'; ?>>
-                    <span data-on="Si" data-off="No" class="switch-label"></span>
-                    <span class="switch-handle"></span>
-                  </label>
-                </span>
-              </div>
-
-              <!-- Notification System -->
-              <div class="form-group">
-                <label for="force_notif">Forzar usuarios a ver notificaciones <a class="nounderline" data-toggle="tooltip" title="With this enabled, notifications will popup automatically for your users. It could be annoying, but in some situatuons, notifications are crucial."><font color="blue">?</font></a></label>
-                <span style="float:right;">
-                  <label class="switch switch-text switch-success">
-                    <input id="force_notif" type="checkbox" class="switch-input toggle" data-desc="Force Notifications Setting" <?php if($settings->force_notif==1) echo 'checked="true"'; ?>>
-                    <span data-on="Si" data-off="No" class="switch-label"></span>
-                    <span class="switch-handle"></span>
-                  </label>
-                </span>
-              </div>
-
-              <!-- Expiration for Notifications Setting -->
-              <div class="form-group">
-                <label for="notif_daylimit">Expiracion de Notificaciones<a class="nounderline" data-toggle="tooltip" title="Notifications are archived from user views automatically when they load a page that has the HTML footer (by default all US files) based on the date of the notification, and the difference between that date and now. Change this to increase or decrease the amount of days. Minimum: 1, Maximum: 999, Default: 7."><font color="blue">?</font></a></label>
-                <div class="input-group">
-                  <input type="number" step="1" min="1" max="999" class="form-control ajxnum" data-desc="Expiration For Notifications" name="notif_daylimit" id="notif_daylimit" value="<?=$settings->notif_daylimit?>">
-                  <span class="input-group-addon">Dias</span>
-                </div>
-              </div>
-
-              <br>
-              <h2>Configuraciones de Usuario</h2>
-              <br>
-
-
-              <div class="form-group">
-                <label for="redirect_uri_after_login">Redireccionar despues de Ingresar <a class="nounderline" data-toggle="tooltip" title="The folder and file that you wish to redirect the user to after login. Default: users/account.php. Note that admins get redirected to this dashboard by default unless you intercept that call with something in usersc/scripts/custom_login_script.php"><font color="blue">?</font></a></label>
-                <input type="text" class="form-control ajxtxt" data-desc="Redirect After Login" name="redirect_uri_after_login" id="redirect_uri_after_login" value="<?=$settings->redirect_uri_after_login?>">
-              </div>
-
-              <!-- echouser Option
-              <div class="form-group">
-                <label for="echouser">echouser Function <a class="nounderline" data-toggle="tooltip" title="What do you want to echo when you use the echouser function? You can use this to echo their name in several different formats. Need their username instead? Use echousername. If it cannot find the user, it will echo Deleted. Default: FName LName."><font color="blue">?</font></a></label>
-                <select id="echouser" class="form-control ajxnum" data-desc="echouser Function" name="echouser">
-                  <option value="0" <?php if($settings->echouser==0) echo 'selected="selected"'; ?> >FName LName</option>
-                  <option value="1" <?php if($settings->echouser==1) echo 'selected="selected"'; ?> >Username</option>
-                  <option value="2" <?php if($settings->echouser==2) echo 'selected="selected"'; ?> >Username (FName LName)</option>
-                  <option value="3" <?php if($settings->echouser==3) echo 'selected="selected"'; ?> >Username (FName)</option>
-                </select>
-              </div>
-              -->
-              <br>
-              <h2>Invisible Recaptcha</h2>
-              <br>
-              <!-- Recaptcha Option -->
-              <div class="form-group">
-                <label for="recaptcha">Invisible Recaptcha <a class="nounderline" data-toggle="tooltip" title="Use the Google Recaptcha to protect yourself from spam registrations and logins, and to verify the legitimacy of a users session. You can set this to Enabled for Registration and Logins, or just Registrations. Default: Disabled."><font color="blue">?</font></a></label>
-                <select id="recaptcha" class="form-control ajxnum" data-desc="Invisible Recaptcha" name="recaptcha">
-                  <option value="1" <?php if($settings->recaptcha==1) echo 'selected="selected"'; ?> >Activar</option>
-                  <option value="0" <?php if($settings->recaptcha==0) echo 'selected="selected"'; ?> >Desactivar</option>
-                  <option value="2" <?php if($settings->recaptcha==2) echo 'selected="selected"'; ?> >Solo para Registros</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="min_pw">Invisible Recaptcha Publica (Sitio) Key</label> <?php if(in_array($user->data()->id, $master_account)) {?><a href="#" class="nounderline" id="recapatcha_public_show"><span class="fa fa-eye"></span> show</a><?php } ?>
-                <input type="password" autocomplete="off" class="form-control ajxtxt" data-desc="Recaptcha Site Key" name="recap_public" id="recap_public" value="<?=$settings->recap_public?>">
-              </div>
-
-              <div class="form-group">
-                <label for="max_pw">Invisible Recaptcha Privada (Secreta) Key</label> <?php if(in_array($user->data()->id, $master_account)) {?><a href="#" class="nounderline" id="recapatcha_private_show"><span class="fa fa-eye"></span> show</a><?php } ?>
-                <input type="password" autocomplete="off" class="form-control ajxtxt" data-desc="Recaptcha Private Key" name="recap_private" id="recap_private" value="<?=$settings->recap_private?>">
-              </div>
-
-
-            </div>
           </div>
-
-
 
           <input type="hidden" name="csrf" value="<?=$token?>" />
         </form>

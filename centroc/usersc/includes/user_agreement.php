@@ -1,20 +1,20 @@
-Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
+Bienvenido a nuestro sitio web. Si continúa navegando y utilizando este sitio web, acepta cumplir y estar sujeto a los siguientes términos y condiciones de uso, que junto con nuestra política de privacidad rigen nuestra relación con usted en relación con este sitio web. Si no está de acuerdo con alguna parte de estos términos y condiciones, no utilice nuestro sitio web.
 
-The use of this website is subject to the following terms of use:
+El uso de este sitio web está sujeto a los siguientes términos de uso:
 
-The content of the pages of this website is for your general information and use only. It is subject to change without notice.
+El contenido de las páginas de este sitio web es solo para su información general y uso. Está sujeto a cambios sin previo aviso.
 
-This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties.
+Este sitio web utiliza cookies para monitorear las preferencias de navegación. Si permite el uso de cookies, podemos almacenar la siguiente información personal para uso de terceros.
 
-Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose.
+Ni nosotros ni terceros proporcionamos ninguna garantía o garantía en cuanto a la precisión, puntualidad, rendimiento, integridad o idoneidad de la información y los materiales encontrados u ofrecidos en este sitio web para cualquier propósito en particular.
 
-You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.
+Usted reconoce que dicha información y materiales pueden contener inexactitudes o errores y excluimos expresamente la responsabilidad por tales inexactitudes o errores en la medida máxima permitida por la ley.
 
-Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.
+El uso de cualquier información o material en este sitio web es totalmente bajo su propio riesgo, del cual no seremos responsables. Será su responsabilidad garantizar que cualquier producto, servicio o información disponible a través de este sitio web cumpla con sus requisitos específicos.
 
-This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.
-All trade marks reproduced in this website which are not the property of, or licensed to, the operator are acknowledged on the website.
+Este sitio web contiene material que es de nuestra propiedad o que tenemos licencia. Este material incluye, pero no se limita a, el diseño, diseño, apariencia, apariencia y gráficos. Queda prohibida la reproducción, excepto de conformidad con el aviso de copyright, que forma parte de estos términos y condiciones.
+Todas las marcas registradas reproducidas en este sitio web que no son propiedad de, o licenciadas para, el operador son reconocidas en el sitio web.
 
-Unauthorised use of this website may give rise to a claim for damages and/or be a criminal offence.
+El uso no autorizado de este sitio web puede dar lugar a una reclamación por daños y / o ser un delito penal.
 
-From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that we endorse the website(s). We have no responsibility for the content of the linked website(s).
+De vez en cuando, este sitio web también puede incluir enlaces a otros sitios web. Estos enlaces se proporcionan para su conveniencia para proporcionar más información. No significan que respaldamos el (los) sitio (s) web. No tenemos responsabilidad por el contenido de los sitios web vinculados.

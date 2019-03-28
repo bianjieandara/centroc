@@ -2,8 +2,8 @@
   <div class="page-header float-right">
     <div class="page-title">
       <ol class="breadcrumb text-right">
-        <li><a href="<?=$us_url_root?>users/admin.php">Dashboard</a></li>
-        <li>Manage</li>
+        <li><a href="<?=$us_url_root?>users/admin.php">Panel Administrativo</a></li>
+        <li>Maneja</li>
         <li class="active">Navigation</li>
       </ol>
     </div>

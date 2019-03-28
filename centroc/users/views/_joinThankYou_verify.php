@@ -1,29 +1,13 @@
-<?php
-/*
-UserSpice 4
-An Open Source PHP User Management System
-by the UserSpice Team at http://UserSpice.com
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-*/
-?>
-<div class="row">
-  <div class="col-sm-12">
-    <h1>Welcome To <?=$settings->site_name?></h1>
-    <p>Your verification link has been sent to your email address.</p>
-    <p>Click the link in the email to complete verification. Be sure to check your spam folder if the email isn't in your inbox.</p>
-    <p>Verification links are only valid for <?=$settings->join_vericode_expiry?> hours.</p>
-    <br />
+<div id="page-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Bienvenido al <?=$settings->site_name?></h3>
+        <p>Se le ha envio un link de verificacion a su correo electronico.</p>
+        <p>Dale click a el link para continuar con el proceso de verificacion. Asegurate de mirar la carpeta de correos no deseados si no encuentras el correo en la bandeja de entrada.</p>
+        <p>Links de Verificacion son validos solo por <?=$settings->join_vericode_expiry?> horas.</p>
+        <br />
+      </div>
+    </div>
   </div>
 </div>

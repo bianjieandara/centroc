@@ -60,11 +60,10 @@ if ($user->isLoggedIn()) {
 
 					 <!-- Hamburger menu link -->
 					<?php if (checkMenu(2,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
-						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php"></i> Admin Dashboard</a></li> <!-- Hamburger menu link -->
-						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=users">User Management</a></li> <!-- Hamburger menu link -->
-						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=permissions">User Permissions</a></li> <!-- Hamburger menu link -->
-						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=pages">System Pages</a></li> <!-- Hamburger menu link -->
-						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=messages">Messages Admin</a></li> <!-- Hamburger menu link -->
+						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php"></i> Panel Administrador</a></li> <!-- Hamburger menu link -->
+						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=users">Manejo de Usuarios</a></li> <!-- Hamburger menu link -->
+						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=permissions">Permisos de Paginas</a></li> <!-- Hamburger menu link -->
+						<li class="hidden-sm hidden-md hidden-lg"><a href="<?=$us_url_root?>users/admin.php?view=pages">Manejo de Paginas</a></li> <!-- Hamburger menu link -->
 						<?php } // is user an admin ?>
 
           <?php if (checkMenu(3,$user->data()->id)){  //Links for permission level 2 (default admin) ?>
@@ -83,7 +82,6 @@ if ($user->isLoggedIn()) {
 								<li><a href="<?=$us_url_root?>users/admin.php?view=users">Manejo de Usuarios</a></li>
 								<li><a href="<?=$us_url_root?>users/admin.php?view=permissions">Permisos de Paginas</a></li>
 								<li><a href="<?=$us_url_root?>users/admin.php?view=pages">Manejo de Paginas</a></li>
-								<li><a href="<?=$us_url_root?>users/admin.php?view=messages">Sistema de Mensajeria</a></li>
 							<?php } // is user an admin ?>
               <?php if (checkMenu(3,$user->data()->id)){  //Links for permission level 3 (default admin) ?>
 								<li><a href="<?=$us_url_root?>users/requests_dashboard.php">Panel Coordinador</a></li><!-- regular Admin menu link -->

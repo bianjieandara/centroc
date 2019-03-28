@@ -247,12 +247,6 @@ if(Input::exists()){
 <div class="container">
 <?php
 if($settings->registration==1) {
-  if($settings->glogin==1 && !$user->isLoggedIn()){
-    require_once $abs_us_root.$us_url_root.'users/includes/google_oauth_login.php';
-  }
-  if($settings->fblogin==1 && !$user->isLoggedIn()){
-    require_once $abs_us_root.$us_url_root.'users/includes/facebook_oauth.php';
-  }
   require $abs_us_root.$us_url_root.'users/views/_join.php';
 }
 else {

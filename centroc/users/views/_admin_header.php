@@ -20,7 +20,7 @@
       <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-hand-o-left"></i></a>
       <div class="page-header float-left">
         <div class="page-title">
-          <h1>Dashboard</h1>
+          <h1>Panel Administrativo</h1>
         </div>
       </div>
     </div>

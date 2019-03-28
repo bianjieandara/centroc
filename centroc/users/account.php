@@ -52,6 +52,7 @@ $userdetails = fetchUserDetails(NULL, NULL, $get_info_id); //Fetch user details
 
 		<p><img src="<?=$grav; ?>" class="img-thumbnail" alt="Generic placeholder thumbnail"></p>
 		<p><a href="../users/user_settings.php" class="btn crose-btn">Editar</a></p>
+		<p><a href="../users/logout.php" class="btn crose-btn">Salir</a></p>
 		<?php
 		if($settings->twofa == 1){
 		$twoQ = $db->query("select twoKey from users where id = ? and twoEnabled = 0", [$userdetails->id]);
@@ -69,13 +70,13 @@ $userdetails = fetchUserDetails(NULL, NULL, $get_info_id); //Fetch user details
 		?>
 	</div>
 	<div class="col-sm-12 col-md-9">
-		<h2><?=echousername($user->data()->id)?></h2>
-		<p><?=ucfirst($user->data()->fname)." ".ucfirst($user->data()->lname)?></p>
+		<h3>Hola <?=ucfirst($user->data()->fname)." ".ucfirst($user->data()->lname)?>!</h3>
+		<h4>Mis datos</h4>
+		<p>Usuario: <?=echousername($user->data()->id)?></p>
+		<p>Nombre: <?=ucfirst($user->data()->fname)." ".ucfirst($user->data()->lname)?></p>
 		<p>Email: <?=ucfirst($user->data()->email)?></p>
 		<p>Ultima Vez Conectado: <?=$lastlogin?></p>
 		<p>Miembro Desde: <?=$signupdate?></p>
-		<?php if($settings->session_manager==1) {?><p>Number of Active Sessions: <?=UserSessionCount()?> <sup><a class="nounderline" data-toggle="tooltip" title="Click the Manage Sessions button in the left sidebar for more information.">?</a></sup></p><?php } ?>
-		<p>This is the private account page for your users. It can be whatever you want it to be; This code serves as a guide on how to use some of the built-in UserSpice functionality. </p>
 	</div>
 </div>
 </div>

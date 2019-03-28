@@ -35,16 +35,16 @@ if (Input::get('forgotten_password')) {
               'vericode' => $vericode,
               'reset_vericode_expiry' => $settings->reset_vericode_expiry
             );
-            $subject = 'Password Reset';
+            $subject = 'Reiniciar Contraseña';
             $encoded_email=rawurlencode($email);
             $body =  email_body('_email_template_forgot_password.php',$options);
             $email_sent=email($email,$subject,$body);
             logger($fuser->data()->id,"User","Requested password reset.");
             if(!$email_sent){
-                $errors[] = 'Email NOT sent due to error. Please contact site administrator.';
+                $errors[] = 'Email no enviado por un error ocurrido. Por favor contactar al administrador del sitio.';
             }
         }else{
-            $errors[] = 'That email does not exist in our database';
+            $errors[] = 'Este email no se encuentra registrado en nuestra base de datos';
         }
     }else{
         //display the errors

@@ -43,10 +43,10 @@ if(isset($_POST['contact-form'])){
 
 
 
-      $email_message .= "Nombre: ".clean_string($name)."\n";
-      $email_message .= "Email: ".clean_string($email)."\n";
-      $email_message .= "Telefono: ".clean_string($tlf)."\n";
-      $email_message .= "Mensaje: ".clean_string($message)."\n";
+      $email_message .= "<p>Nombre: ".clean_string($name)."</p>";
+      $email_message .= "<p>Email: ".clean_string($email)."</p>";
+      $email_message .= "<p>Telefono: ".clean_string($tlf)."</p>";
+      $email_message .= "<p>Mensaje: ".clean_string($message)."</p>";
 
       $to = "bianjieandara@gmail.com";
 

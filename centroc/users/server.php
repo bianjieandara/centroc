@@ -41,6 +41,10 @@ function createRequestLegals($request_values){
 	if (empty($message)) { array_push($errors, "uh-oh Olvidaste escribir el mensaje"); }
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
 
+	$regex = '/^\d{4}[-]{1}\d{7}$/';
+	if (!preg_match($regex, $tlf)) {
+		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
     $query = $db->query("INSERT INTO requests_legals (name, email, date, tlf, contact, category, message, status, user_id, created_at, updated_at)
@@ -68,6 +72,11 @@ function createRequestAccounting($request_values){
 	if (empty($message)) { array_push($errors, "uh-oh Olvidaste escribir el mensaje"); }
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
 
+	$regex = '/^\d{4}[-]{1}\d{7}$/';
+	if (!preg_match($regex, $tlf)) {
+		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
+
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
     $query = $db->query("INSERT INTO requests_accounting (name, email, date, tlf, contact, message, status, user_id, created_at, updated_at)
@@ -94,6 +103,11 @@ function createRequestPsychological($request_values){
 	if (empty($date)) { array_push($errors, "* La fecha la necesitamos saber");}
 	if (empty($message)) { array_push($errors, "uh-oh Olvidaste escribir el mensaje"); }
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
+
+	$regex = '/^\d{4}[-]{1}\d{7}$/';
+	if (!preg_match($regex, $tlf)) {
+		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
@@ -130,6 +144,11 @@ function createRequestRecreation($request_values){
 	if (empty($people)) { array_push($errors, "Oops.. La cantidad de personas esta faltando"); }
 	if (empty($message)) { array_push($errors, "uh-oh Olvidaste escribir el mensaje"); }
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
+
+	$regex = '/^\d{4}[-]{1}\d{7}$/';
+	if (!preg_match($regex, $tlf)) {
+		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
@@ -168,6 +187,11 @@ function createRequestEvents($request_values){
 	if (empty($people)) { array_push($errors, "Oops.. La cantidad de personas esta faltando"); }
 	if (empty($message)) { array_push($errors, "uh-oh Olvidaste escribir el mensaje"); }
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
+
+	$regex = '/^\d{4}[-]{1}\d{7}$/';
+	if (!preg_match($regex, $tlf)) {
+		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	} 
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {

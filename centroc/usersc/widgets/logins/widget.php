@@ -20,7 +20,7 @@ $logins .= $c.", ";
 <div class="col-lg-6">
   <div class="card">
     <div class="card-body">
-      <h4 class="mb-3">Logins</h4>
+      <h4 class="mb-3">Ingresos</h4>
       <canvas id="logins-chart"></canvas>
     </div>
   </div>
@@ -34,7 +34,7 @@ ctx.height = 150;
 var myChart = new Chart( ctx, {
   type: 'line',
   data: {
-    labels: [" ","This week Last Year", "2 Weeks Ago", "1 Week Ago", "Last 7 days" ],
+    labels: [" ","El Año Pasado", "2 Semanas atras", "1 Semana atras", "Ultimos 7 dias" ],
     type: 'line',
     defaultFontFamily: 'Montserrat',
     datasets: [ {
@@ -90,7 +90,7 @@ var myChart = new Chart( ctx, {
         },
         scaleLabel: {
           display: true,
-          labelString: 'Users'
+          labelString: 'Usuarios'
         }
       } ]
     },
