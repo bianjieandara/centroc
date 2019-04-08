@@ -44,7 +44,6 @@ if ($user->isLoggedIn()) {
               <li><a href="<?=$us_url_root?>users/events.php">Logistica y Eventos</a></li>
             </ul>
           </li>
-          <li><a href="<?=$us_url_root?>users/aboutus.php" class="">NOSOTROS</a></li>
           <li><a href="<?=$us_url_root?>users/contactus.php" class="">CONTACTO</a></li>
 					<li><a href="<?=$us_url_root?>users/account.php"><i class="fa fa-fw fa-user"></i> <?php echo echousername($user->data()->id);?></a></li> <!-- Common for Hamburger and Regular menus link -->
 					<?php if($settings->notifications==1) {?>
@@ -107,7 +106,6 @@ if ($user->isLoggedIn()) {
               <li><a href="<?=$us_url_root?>users/events.php">Logistica y Eventos</a></li>
             </ul>
           </li>
-          <li><a href="<?=$us_url_root?>users/contactus.php" class="">NOSOTROS</a></li>
           <li><a href="<?=$us_url_root?>users/contactus.php" class="">CONTACTO</a></li>
 					<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">AYUDA<b class="caret"></b></a>
 						<ul class="dropdown-menu">

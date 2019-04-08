@@ -26,7 +26,7 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 											<div class="hero-slides-content">
 													<h2 data-animation="fadeInUp" data-delay="100ms">Construyendo la Esperanza</h2>
 													<p data-animation="fadeInUp" data-delay="300ms">Aprende acerca de nuestra mision, nuestras creencias y la esperanza que ponemos en Cristo</p>
-													<a href="#" class="btn crose-btn" data-animation="fadeInUp" data-delay="500ms">Quienes somos</a>
+													<a href="users/contactus.php" class="btn crose-btn" data-animation="fadeInUp" data-delay="500ms">Contactanos</a>
 											</div>
 									</div>
 							</div>
@@ -42,7 +42,7 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 											<div class="hero-slides-content">
 													<h2 data-animation="fadeInUp" data-delay="100ms">Por Gracia de Dios</h2>
 													<p data-animation="fadeInUp" data-delay="300ms">Aprende acerca de nuestra mision, nuestras creencias y la esperanza que ponemos en Cristo</p>
-													<a href="#" class="btn crose-btn" data-animation="fadeInUp" data-delay="500ms">Contactanos</a>
+													<a href="users/contactus.php" class="btn crose-btn" data-animation="fadeInUp" data-delay="500ms">Contactanos</a>
 											</div>
 									</div>
 							</div>
@@ -61,47 +61,42 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 											<h2>Bienvenido</h2>
 											<h3>Frente Cristiano del Zulia</h3>
 											<div class="section_subtitle">El Poder del Servicio</div>
-											<p>A church isn't a building—it's the people. We meet in locations around the United States and globally at Life.Church Online. No matter where you join us.</p>
+											<p>Cuando hagan cualquier trabajo, háganlo de todo corazón, como si estuvieran trabajando para el Señor y no para los seres humanos.<br> <b>Colosenses 3:23</b>
+											</p>
 									</div>
 							</div>
 					</div>
 
 					<div class="row about-content justify-content-center">
 							<!-- Single About Us Content -->
-							<div class="col-12 col-md-6 col-lg-4">
+							<div class="col-12 col-md-6 col-lg-6">
 									<div class="about-us-content mb-100">
-											<img src="<?=$us_url_root?>users/images/bg-img/3.jpg" alt="">
+										<div class="img-our">
+											<img src="<?=$us_url_root?>users/images/bg-img/12.jpg" alt="">
+										</div>
+
 											<div class="about-text">
-													<h4>Our Church</h4>
-													<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-													<a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+													<h4>Mision</h4>
+													<p>Ser una entidad asesora del Gobierno en materias de índole religioso, que administra los programas
+														de Ejecutivo hacia las Iglesias y garantiza con eficacia la igualdad de todas estas organizaciones ante
+														el Estado.</p>
 											</div>
 									</div>
 							</div>
 
 							<!-- Single About Us Content -->
-							<div class="col-12 col-md-6 col-lg-4">
+							<div class="col-12 col-md-6 col-lg-6">
 									<div class="about-us-content mb-100">
-											<img src="<?=$us_url_root?>users/images/bg-img/4.jpg" alt="">
+										<div class="img-our">
+											<img src="<?=$us_url_root?>users/images/bg-img/40.jpg" alt="">
+										</div>
 											<div class="about-text">
-													<h4>Our History</h4>
-													<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-													<a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
+													<h4>Vision</h4>
+													<p>Representar al Gobierno frente a todas las entidades religiosas del estado Zulia, con el fin de canalizar y responder las solicitudes o inquietudes que ellas presenten, así como asesorar al Ejecutivo en materias que se relacionen con el ejercicio igualitario de la Libertad de Culto en nuestro país.</p>
 											</div>
 									</div>
 							</div>
 
-							<!-- Single About Us Content -->
-							<div class="col-12 col-md-6 col-lg-4">
-									<div class="about-us-content mb-100">
-											<img src="<?=$us_url_root?>users/images/bg-img/5.jpg" alt="">
-											<div class="about-text">
-													<h4>Our Sermons</h4>
-													<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-													<a href="#">Read More <i class="fa fa-angle-double-right"></i></a>
-											</div>
-									</div>
-							</div>
 					</div>
 			</div>
 	</section>
@@ -126,38 +121,32 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 
 							<!-- Causes Slider Item -->
 							<div class="owl-item text-center causes_item">
-								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/causes_1.jpg" alt=""></div>
-								<div class="causes_item_title">Children's aid</div>
-								<div class="causes_item_text">
-									<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dictumst.</p>
-								</div>
+								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/service1.jpg" alt=""></div>
+								<div class="causes_item_title">Asesoria Legal</div>
 							</div>
 
 							<!-- Causes Slider Item -->
 							<div class="owl-item text-center causes_item">
-								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/causes_2.jpg" alt=""></div>
-								<div class="causes_item_title">Aid for the Elderly</div>
-								<div class="causes_item_text">
-									<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dictumst.</p>
-								</div>
+								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/service2.jpg" alt=""></div>
+								<div class="causes_item_title">Asesoria Contable</div>
 							</div>
 
 							<!-- Causes Slider Item -->
 							<div class="owl-item text-center causes_item">
-								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/causes_3.jpg" alt=""></div>
-								<div class="causes_item_title">Community Food</div>
-								<div class="causes_item_text">
-									<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dictumst.</p>
-								</div>
+								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/service3.jpg" alt=""></div>
+								<div class="causes_item_title">Ayuda Psicologica</div>
 							</div>
 
 							<!-- Causes Slider Item -->
 							<div class="owl-item text-center causes_item">
-								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/causes_4.jpg" alt=""></div>
-								<div class="causes_item_title">After School</div>
-								<div class="causes_item_text">
-									<p>Praesent malesuada congue magna at finibus. In hac habitasse platea dictumst.</p>
-								</div>
+								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/service41.jpg" alt=""></div>
+								<div class="causes_item_title">Recreacion</div>
+							</div>
+
+							<!-- Causes Slider Item -->
+							<div class="owl-item text-center causes_item">
+								<div class="causes_item_image"><img src="<?=$us_url_root?>users/images/service51.jpg" alt=""></div>
+								<div class="causes_item_title">Logistica y Eventos</div>
 							</div>
 
 						</div>
@@ -177,7 +166,7 @@ require_once $abs_us_root.$us_url_root.'users/includes/navigation.php';
 									<div class="call-to-action-content text-center">
 											<h6>Un Lugar Para Ti</h6>
 											<h2>Forma parte del grupo de iglesias, organizaciones y fundaciones que componen el Frente Cristiano del Zulia.</h2>
-											<a href="#" class="btn crose-btn btn-2">EMPIEZA AQUI</a>
+											<a href="users/join.php" class="btn crose-btn btn-2">EMPIEZA AQUI</a>
 									</div>
 							</div>
 					</div>

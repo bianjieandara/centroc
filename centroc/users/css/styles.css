@@ -187,6 +187,10 @@ form.form-signup, form#login-form  {
     background-color: #fff;
     padding: 40px;
 }
+.img-our img{
+  height: 300px;
+  width: 450px;
+}
 
 
 h2.form-signin-heading {

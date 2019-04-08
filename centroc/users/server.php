@@ -42,8 +42,14 @@ function createRequestLegals($request_values){
 	if (empty($contact)) { array_push($errors, "uh-oh Olvidaste escribir por cual medio le gustaria ser contactado"); }
 
 	$regex = '/^\d{4}[-]{1}\d{7}$/';
+
 	if (!preg_match($regex, $tlf)) {
 		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
+
+	$regex2 = '/^[A-Za-z]+((\s)?([A-Za-z])+)*$/';
+	if (!preg_match($regex2, $name)) {
+		array_push($errors, "Oops.. El nombre no puede contener caracteres numericos ni especiales.");
 	}
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
@@ -76,6 +82,10 @@ function createRequestAccounting($request_values){
 	if (!preg_match($regex, $tlf)) {
 		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
 	}
+	$regex2 = '/^[A-Za-z]+((\s)?([A-Za-z])+)*$/';
+	if (!preg_match($regex2, $name)) {
+		array_push($errors, "Oops.. El nombre no puede contener caracteres numericos ni especiales.");
+	}
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
@@ -107,6 +117,10 @@ function createRequestPsychological($request_values){
 	$regex = '/^\d{4}[-]{1}\d{7}$/';
 	if (!preg_match($regex, $tlf)) {
 		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
+	$regex2 = '/^[A-Za-z]+((\s)?([A-Za-z])+)*$/';
+	if (!preg_match($regex2, $name)) {
+		array_push($errors, "Oops.. El nombre no puede contener caracteres numericos ni especiales.");
 	}
 
 	// register user if there are no errors in the form
@@ -148,6 +162,10 @@ function createRequestRecreation($request_values){
 	$regex = '/^\d{4}[-]{1}\d{7}$/';
 	if (!preg_match($regex, $tlf)) {
 		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
+	}
+	$regex2 = '/^[A-Za-z]+((\s)?([A-Za-z])+)*$/';
+	if (!preg_match($regex2, $name)) {
+		array_push($errors, "Oops.. El nombre no puede contener caracteres numericos ni especiales.");
 	}
 
 	// register user if there are no errors in the form
@@ -191,7 +209,11 @@ function createRequestEvents($request_values){
 	$regex = '/^\d{4}[-]{1}\d{7}$/';
 	if (!preg_match($regex, $tlf)) {
 		array_push($errors, "El telefono no esta en el formato correcto. Ej: 0412-1234567");
-	} 
+	}
+	$regex2 = '/^[A-Za-z]+((\s)?([A-Za-z])+)*$/';
+	if (!preg_match($regex2, $name)) {
+		array_push($errors, "Oops.. El nombre no puede contener caracteres numericos ni especiales.");
+	}
 
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
